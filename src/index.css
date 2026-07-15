@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-primary-200 text-primary-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-primary-100 bg-primary-50 shadow-soft;
+  }
+  .card-interactive {
+    @apply card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card;
+  }
+}
